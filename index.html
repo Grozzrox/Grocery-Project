@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Spartan&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="styles.css">
 
@@ -28,13 +28,13 @@
                         <a class="nav-link active" aria-current="page" href="#">Home | </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About | </a>
+                        <a class="nav-link" href="#aboutSection">About | </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Shop | </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-shopping-cart fa-lg ml-2"></i></a>
+                        <a class="nav-link" href="#"><i class="fa fa-shopping-cart fa-lg ml-2 mr-2"></i></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"><i class="fa fa-user fa-lg ml-2"></i></a>
@@ -47,17 +47,30 @@
             <div class="overlay">
                 <div class="container">
                     <div class="row">
-                        <div class="col col-md-4 description">
-                            <h1 class="text-white">The new way to shop for groceries. <br> Delivered to your door.</h1>
+                        <div class="col-12 col-md-4 description">
+                            <h1 class="text-white">Shop <br> with ease</h1>
+                            <h3 class="text-white mt-3">The new way to do grocery shopping is here.</h3>
+                            <button type="button" class="btn btn-warning btn-lg mt-3">Start shopping</button>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
 
-        <div class="container">
+        <div class="container aboutSection" id="aboutSection">
             <div class="row row-group">
-                <h1 class="text-info mx-auto">Hello World</h1>
+                <h1 class="col-12 text-center sectionHeader">About Us</h1>
+            </div>
+            <hr>
+            <div class="row row-group mt-4 aboutText">
+                <div class="col-12 col-md-6 align-self-center">
+                    <h2>Founded in 2021</h2>
+                    <p>GrocerEase was founded by Andrew Grozdanov after he discovered that his mission in life is to provide affordable access to fresh and healthy food to everyone, no matter where they live.</p>
+                    <button type="button" class="btn btn-lg mb-4">Shop now</button>
+                </div>
+                <div class="col-md-6">
+                    <img class="img-fluid" src="/images/grocerystore.jpg" width="500" height="500" alt="Grocery Store">
+                </div>
             </div>
         </div>
 
