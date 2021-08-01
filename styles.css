@@ -165,5 +165,5 @@ h6 {
 }
 
 .card-img-overlay h5{
-    background: rgba(0, 0, 0, 0.25);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.616), rgba(0, 0, 0, 0));
 }
