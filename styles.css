@@ -167,3 +167,27 @@ h6 {
 .card-img-overlay h5{
     background: linear-gradient(to right, rgba(0, 0, 0, 0.616), rgba(0, 0, 0, 0));
 }
+
+.card {
+    overflow: hidden;
+}
+
+.card:hover,
+.card:active {
+    width: 105%;
+    border: 1px solid black;
+    cursor: grab;
+    
+}
+
+.card img {
+    transform-origin: 50% 65%;
+    filter: brightness(80%);
+    transition: transform 3s, filter 3s ease-in-out;
+}
+
+.card:hover img {
+    filter: brightness(110%);
+    transform: scale(3);
+}
+
