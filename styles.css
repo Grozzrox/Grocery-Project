@@ -92,6 +92,7 @@ body {
     padding-top: 2em;
 }
 
+.modal-footer button:hover,
 button a,
 button a:hover {
     color: #fff;
