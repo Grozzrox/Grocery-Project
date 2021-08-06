@@ -175,7 +175,6 @@ h6 {
 
 .card:hover,
 .card:active {
-    width: 105%;
     border: 1px solid black;
     cursor: grab;
     
