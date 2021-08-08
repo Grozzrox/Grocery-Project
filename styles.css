@@ -8,7 +8,6 @@ body {
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    box-shadow: 0 4px 2px -2px rgba(34, 34, 34, 0.253);
 }
 
 .overlay {
@@ -115,16 +114,21 @@ button a:hover {
 
 .aboutDiv p {
     color: rgb(110, 110, 110);
-}
-.aboutText {
-    padding-top: 4em;
+    font-weight: 300;
+    padding-bottom: 5px;
 }
 
-#reviewSection {
-    padding-top: 2em;
-    padding-bottom: 1em;
-    background-image: linear-gradient(to top, rgba(238, 155, 0, 0.715) 5%, rgba(202,103,2,0.25) 35%, rgba(238,155,0,0.025) 100%), url(/images/food.png);
-    background-blend-mode: screen;
+.carousel {
+    margin-top: 6em;
+}
+
+.carousel-control-prev {
+    position: relative;
+}
+
+#shopButton {
+    position: absolute;
+    z-index: 1;
 }
 
 .reviewDiv i {
@@ -150,14 +154,11 @@ h6 {
     padding-bottom: 30em;
     min-height: 100%;
     background-image: linear-gradient(0deg, rgba(255, 0, 150, 0.3), rgba(238,155,0, 0.3)), url(/images/food.png);
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
 }
 
 .plansDiv {
     padding-top: 4em;
-}
-
-#shopSection {
-    background: rgb(196, 196, 196);
 }
 
 .shopDiv h1 {
@@ -175,11 +176,13 @@ h6 {
 
 .card {
     overflow: hidden;
+    border: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .card:hover,
 .card:active {
-    border: 1px solid black;
+    border: none;
     cursor: grab;
     
 }
