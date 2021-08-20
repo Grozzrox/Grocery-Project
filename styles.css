@@ -220,3 +220,11 @@ h6 {
     padding: 0.5rem;
 }
 
+#button-addon1,
+#button-addon2 {
+    height: 2.35rem;
+}
+
+.modal-row span {
+    font-size: 0.8rem;
+}
