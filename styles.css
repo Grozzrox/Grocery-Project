@@ -212,3 +212,11 @@ h6 {
     word-spacing: normal;
 }
 
+.modal-body ul {
+    list-style: none;
+}
+
+.modal-body ul li {
+    padding: 0.5rem;
+}
+
