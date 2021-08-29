@@ -13,6 +13,11 @@ const addBtns = document.querySelectorAll('#button-addon2');
 const minusBtns = document.querySelectorAll('#button-addon1');
 
 let itemCount = 0;
+const itemArr = {};
+
+for (let i = 0; i < itemFields.length; i++) {
+    itemArr[itemFields[i].id] = itemFields[i].value;
+}
 
 loginButton.addEventListener("click", function() {
     $('#loginModal').modal('show');
@@ -38,14 +43,53 @@ for (let i = 0; i < foodCards.length; i++) {
 
 for (let i = 0; i < itemFields.length; i++) {
     addBtns[i].addEventListener("click", function() {
-        itemCount++;
-        itemFields[i].value = itemCount;
+        //itemCount++;
+        //itemFields[i].value = itemCount;
+
+        if (i === 0) {
+            itemArr.tomatoField = Number(itemArr.tomatoField) + 1;
+            itemFields[i].value = itemArr.tomatoField;
+        }
+        else if (i === 1) {
+            itemArr.cornField = Number(itemArr.cornField) + 1;
+            itemFields[i].value = itemArr.cornField;
+        }
+        else if (i === 2) {
+            itemArr.broccoliField = Number(itemArr.broccoliField) + 1;
+            itemFields[i].value = itemArr.broccoliField;
+        }
+        else if (i === 3) {
+            itemArr.potatoField = Number(itemArr.potatoField) + 1;
+            itemFields[i].value = itemArr.potatoField;
+        }
+        else if (i === 4) {
+            itemArr.lettuceField = Number(itemArr.lettuceField) + 1;
+            itemFields[i].value = itemArr.lettuceField;
+        }
     });
 }
 
 for (let i = 0; i < itemFields.length; i++) {
     minusBtns[i].addEventListener("click", function() {
-        itemCount --;
-        itemFields[i].value = itemCount;
+        if (i === 0) {
+            itemArr.tomatoField = Number(itemArr.tomatoField) - 1;
+            itemFields[i].value = itemArr.tomatoField;
+        }
+        else if (i === 1) {
+            itemArr.cornField = Number(itemArr.cornField) - 1;
+            itemFields[i].value = itemArr.cornField;
+        }
+        else if (i === 2) {
+            itemArr.broccoliField = Number(itemArr.broccoliField) - 1;
+            itemFields[i].value = itemArr.broccoliField;
+        }
+        else if (i === 3) {
+            itemArr.potatoField = Number(itemArr.potatoField) - 1;
+            itemFields[i].value = itemArr.potatoField;
+        }
+        else if (i === 4) {
+            itemArr.lettuceField = Number(itemArr.lettuceField) - 1;
+            itemFields[i].value = itemArr.lettuceField;
+        }
     });
 }
