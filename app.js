@@ -20,7 +20,8 @@ const itemArr = [];
 
 function createObj(obj, i) {
     newObj.id = i;
-    newObj.name = String(obj.id);
+    newObj.name = String(obj.dataset.name);
+    newObj.price = String(obj.dataset.price);
     newObj.value = Number(obj.value);
     itemArr.push(newObj);
     newObj = {};
@@ -96,10 +97,10 @@ function addItems() {
         if (itemArr[i].value > 0) {
             const li = document.createElement("li");
             const span = document.createElement("span");
-            li.classList.add("col-sm-6");
-            span.classList.add("col-sm-6");
-            li.textContent = "Tomatoes";
-            span.textContent = `Qty: ${itemArr[i].value} Price: $2.99`;
+            li.classList.add("col-sm-4");
+            span.classList.add("col-sm-8");
+            li.textContent = itemArr[i].name;
+            span.textContent = `Qty: ${itemArr[i].value} Price: $${itemArr[i].price}`;
 
             shoppingList.appendChild(li);
             shoppingList.appendChild(span);
