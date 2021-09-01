@@ -74,3 +74,16 @@ for (let i = 0; i < itemFields.length; i++) {
     });
 }
 
+function updateValue() {
+    
+    for (let i = 0; i < itemFields.length; i++) {
+        if (itemFields[i] === event.target) {
+            itemFields[i].setAttribute('value', event.target.value);
+            itemArr[i].value = Number(itemFields[i].value);
+        }
+    }
+}
+
+for (let i = 0; i < itemArr.length; i++) {
+    itemFields[i].addEventListener("input", updateValue);
+}
