@@ -11,6 +11,9 @@ const produceModal = document.querySelector('#produceModal');
 const itemFields = document.querySelectorAll('.itemField');
 const addBtns = document.querySelectorAll('#button-addon2');
 const minusBtns = document.querySelectorAll('#button-addon1');
+const addToCart = document.querySelector('.addToCart');
+const shoppingList = document.querySelector('.shoppingList');
+
 
 let newObj = {};
 const itemArr = [];
@@ -87,3 +90,22 @@ function updateValue() {
 for (let i = 0; i < itemArr.length; i++) {
     itemFields[i].addEventListener("input", updateValue);
 }
+
+function addItems() {
+    for (let i = 0; i < itemArr.length; i++) {
+        if (itemArr[i].value > 0) {
+            const li = document.createElement("li");
+            const span = document.createElement("span");
+            li.classList.add("col-sm-6");
+            span.classList.add("col-sm-6");
+            li.textContent = "Tomatoes";
+            span.textContent = `Qty: ${itemArr[i].value} Price: $2.99`;
+
+            shoppingList.appendChild(li);
+            shoppingList.appendChild(span);
+
+        }
+    }
+}
+
+addToCart.addEventListener("click", addItems);
