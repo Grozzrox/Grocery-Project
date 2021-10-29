@@ -13,8 +13,9 @@ const addBtns = document.querySelectorAll('#button-addon2');
 const minusBtns = document.querySelectorAll('#button-addon1');
 const addToCart = document.querySelector('.addToCart');
 const shoppingList = document.querySelector('.shoppingList');
+const total = document.querySelector('h4');
 
-
+let counter = 0;
 let newObj = {};
 const itemArr = [];
 
@@ -92,6 +93,11 @@ for (let i = 0; i < itemArr.length; i++) {
     itemFields[i].addEventListener("input", updateValue);
 }
 
+function updateTotal(item) {
+    counter = counter + (item.value * item.price);
+    return counter;
+}
+
 function addItems() {
     for (let i = 0; i < itemArr.length; i++) {
         if (itemArr[i].value > 0) {
@@ -102,8 +108,11 @@ function addItems() {
             li.textContent = itemArr[i].name;
             span.textContent = `Qty: ${itemArr[i].value} Price: $${itemArr[i].price}`;
 
+            updateTotal(itemArr[i]);
+
             shoppingList.appendChild(li);
             shoppingList.appendChild(span);
+            total.textContent = `Total : $${Math.round((counter + Number.EPSILON) * 100) / 100}`;
 
         }
     }
