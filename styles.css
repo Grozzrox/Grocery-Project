@@ -228,3 +228,9 @@ h6 {
 .modal-row span {
     font-size: 0.8rem;
 }
+
+ol input {
+    height: 50%;
+    background-color: lightyellow;
+}
+

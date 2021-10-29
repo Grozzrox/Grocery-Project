@@ -102,16 +102,26 @@ function addItems() {
     for (let i = 0; i < itemArr.length; i++) {
         if (itemArr[i].value > 0) {
             const li = document.createElement("li");
-            const span = document.createElement("span");
+            const spanOne = document.createElement("span");
+            const spanTwo = document.createElement("span");
+            const inputQty = document.createElement("input");
+            inputQty.type = "text";
             li.classList.add("col-sm-4");
-            span.classList.add("col-sm-8");
+            spanOne.classList.add("col-sm-2");
+            spanTwo.classList.add("col-sm-4");
+            inputQty.classList.add("col-sm-2");
+            inputQty.classList.add("text-center");
             li.textContent = itemArr[i].name;
-            span.textContent = `Qty: ${itemArr[i].value} Price: $${itemArr[i].price}`;
+            spanOne.textContent = 'Qty: ';
+            inputQty.value = itemArr[i].value;
+            spanTwo.textContent = `Price: $${itemArr[i].price}`;
 
             updateTotal(itemArr[i]);
 
             shoppingList.appendChild(li);
-            shoppingList.appendChild(span);
+            shoppingList.appendChild(spanOne);
+            shoppingList.appendChild(inputQty);
+            shoppingList.appendChild(spanTwo);
             total.textContent = `Total : $${Math.round((counter + Number.EPSILON) * 100) / 100}`;
 
         }
